@@ -1,0 +1,958 @@
+desc: (none)
+cmd: ./ford.out inst5.txt
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1449163333
+mem_heap_B=1427935224
+mem_heap_extra_B=47720
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2168835238
+mem_heap_B=2133587960
+mem_heap_extra_B=71272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=3128112830
+mem_heap_B=3085983096
+mem_heap_extra_B=103080
+mem_stacks_B=0
+heap_tree=detailed
+n2: 3085983096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3084984144 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 3084984144 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n1: 3084984144 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 3084984144 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n1: 3084984144 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 3084984144 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 3084984144 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 3084984144 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 3084984144 0x10ED5C: main (main.cpp:9)
+ n0: 998952 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=4274315218
+mem_heap_B=4206252328
+mem_heap_extra_B=140464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=4990395674
+mem_heap_B=4917195176
+mem_heap_extra_B=164208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=6071271834
+mem_heap_B=5990316456
+mem_heap_extra_B=200048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=7273807963
+mem_heap_B=7174131424
+mem_heap_extra_B=263688
+mem_stacks_B=0
+heap_tree=peak
+n2: 7174131424 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172190928 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172190928 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172190928 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n1: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+    n0: 4016 in 1 place, below massif's threshold (1.00%)
+ n0: 1940496 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=8713667559
+mem_heap_B=7175997912
+mem_heap_extra_B=1696088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=9948956929
+mem_heap_B=7176285496
+mem_heap_extra_B=1744104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=11060719069
+mem_heap_B=7176526128
+mem_heap_extra_B=1784120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=11801893062
+mem_heap_B=7176670120
+mem_heap_extra_B=1808104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=12790124671
+mem_heap_B=7176886392
+mem_heap_extra_B=1844176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=13654827682
+mem_heap_B=7177054392
+mem_heap_extra_B=1872184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=14396001896
+mem_heap_B=7177173880
+mem_heap_extra_B=1892136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=15162070904
+mem_heap_B=7177317864
+mem_heap_extra_B=1916128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=15935531052
+mem_heap_B=7177183304
+mem_heap_extra_B=1901936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=16709475152
+mem_heap_B=7177149864
+mem_heap_extra_B=1883696
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=17483419252
+mem_heap_B=7177116424
+mem_heap_extra_B=1865456
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7177116424 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 4449448 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=18257363352
+mem_heap_B=7177082984
+mem_heap_extra_B=1847216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=19031307452
+mem_heap_B=7177049544
+mem_heap_extra_B=1828960
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=19805251552
+mem_heap_B=7177016104
+mem_heap_extra_B=1810704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=20579195652
+mem_heap_B=7176982664
+mem_heap_extra_B=1792464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=21353139752
+mem_heap_B=7176949224
+mem_heap_extra_B=1774224
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7176949224 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 4282248 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=22127083852
+mem_heap_B=7176915784
+mem_heap_extra_B=1755984
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=22901027952
+mem_heap_B=7176882344
+mem_heap_extra_B=1737744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=23674972052
+mem_heap_B=7176848904
+mem_heap_extra_B=1719504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=24803301082
+mem_heap_B=7176800152
+mem_heap_extra_B=1692896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=26286015042
+mem_heap_B=7176736088
+mem_heap_extra_B=1657952
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7176736088 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 4069112 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=27768729002
+mem_heap_B=7176672024
+mem_heap_extra_B=1622992
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=28510085982
+mem_heap_B=7176639992
+mem_heap_extra_B=1605520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=29251442962
+mem_heap_B=7176607960
+mem_heap_extra_B=1588048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=29992799942
+mem_heap_B=7176575928
+mem_heap_extra_B=1570576
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7176575928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 3908952 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=30734156922
+mem_heap_B=7176543896
+mem_heap_extra_B=1553088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=31475513902
+mem_heap_B=7176511864
+mem_heap_extra_B=1535616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=32216870882
+mem_heap_B=7176479832
+mem_heap_extra_B=1518144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=32958227862
+mem_heap_B=7176447800
+mem_heap_extra_B=1500672
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=33699584842
+mem_heap_B=7176415768
+mem_heap_extra_B=1483200
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7176415768 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 3748792 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=34440941822
+mem_heap_B=7176383736
+mem_heap_extra_B=1465728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=35182298802
+mem_heap_B=7176351704
+mem_heap_extra_B=1448256
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=35923655782
+mem_heap_B=7176319672
+mem_heap_extra_B=1430784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=36665012762
+mem_heap_B=7176287640
+mem_heap_extra_B=1413312
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=37406369742
+mem_heap_B=7176255608
+mem_heap_extra_B=1395840
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7176255608 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 3588632 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=38147726722
+mem_heap_B=7176223576
+mem_heap_extra_B=1378368
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=38889083702
+mem_heap_B=7176191544
+mem_heap_extra_B=1360896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=39630440682
+mem_heap_B=7176159512
+mem_heap_extra_B=1343424
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=40371797662
+mem_heap_B=7176127480
+mem_heap_extra_B=1325952
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=41113154642
+mem_heap_B=7176095448
+mem_heap_extra_B=1308480
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7176095448 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 3428472 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=41854511622
+mem_heap_B=7176063416
+mem_heap_extra_B=1291008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=42595868602
+mem_heap_B=7176031384
+mem_heap_extra_B=1273536
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=43312785242
+mem_heap_B=7176000408
+mem_heap_extra_B=1256640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=44029701882
+mem_heap_B=7175969432
+mem_heap_extra_B=1239744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=44746618522
+mem_heap_B=7175938456
+mem_heap_extra_B=1222832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=45463535162
+mem_heap_B=7175907480
+mem_heap_extra_B=1205936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=46180451802
+mem_heap_B=7175876504
+mem_heap_extra_B=1189040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=46897368442
+mem_heap_B=7175845528
+mem_heap_extra_B=1172144
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7175845528 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 3178552 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=47614285082
+mem_heap_B=7175814552
+mem_heap_extra_B=1155248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=48331201722
+mem_heap_B=7175783576
+mem_heap_extra_B=1138352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=49048118362
+mem_heap_B=7175752600
+mem_heap_extra_B=1121440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=49765035002
+mem_heap_B=7175721624
+mem_heap_extra_B=1104544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=50481951642
+mem_heap_B=7175690648
+mem_heap_extra_B=1087632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=51198868282
+mem_heap_B=7175659672
+mem_heap_extra_B=1070736
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=51915784922
+mem_heap_B=7175628696
+mem_heap_extra_B=1053840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=52632701562
+mem_heap_B=7175597720
+mem_heap_extra_B=1036944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=53349618202
+mem_heap_B=7175566744
+mem_heap_extra_B=1020048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=54066534842
+mem_heap_B=7175535768
+mem_heap_extra_B=1003152
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7175535768 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 2868792 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=54783451482
+mem_heap_B=7175504792
+mem_heap_extra_B=986256
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=55500368122
+mem_heap_B=7175473816
+mem_heap_extra_B=969360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=56217284762
+mem_heap_B=7175442840
+mem_heap_extra_B=952464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=56934201402
+mem_heap_B=7175411864
+mem_heap_extra_B=935536
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=57651118042
+mem_heap_B=7175380888
+mem_heap_extra_B=918640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=58368034682
+mem_heap_B=7175349912
+mem_heap_extra_B=901744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=59084951322
+mem_heap_B=7175318936
+mem_heap_extra_B=884848
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=59801867962
+mem_heap_B=7175287960
+mem_heap_extra_B=867952
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=60518784602
+mem_heap_B=7175256984
+mem_heap_extra_B=851056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=61235701242
+mem_heap_B=7175226008
+mem_heap_extra_B=834160
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7175226008 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 2559032 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=61952617882
+mem_heap_B=7175195032
+mem_heap_extra_B=817264
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=62669534522
+mem_heap_B=7175164056
+mem_heap_extra_B=800352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=63386451162
+mem_heap_B=7175133080
+mem_heap_extra_B=783456
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=64103368089
+mem_heap_B=7175102096
+mem_heap_extra_B=766544
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=64820284442
+mem_heap_B=7175071128
+mem_heap_extra_B=749664
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=65537201082
+mem_heap_B=7175040152
+mem_heap_extra_B=732768
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=66254117722
+mem_heap_B=7175009176
+mem_heap_extra_B=715872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=66971034362
+mem_heap_B=7174978200
+mem_heap_extra_B=698976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=67687951002
+mem_heap_B=7174947224
+mem_heap_extra_B=682080
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=68404867642
+mem_heap_B=7174916248
+mem_heap_extra_B=665168
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7174916248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 2249272 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=86
+#-----------
+time=69121784282
+mem_heap_B=7174885272
+mem_heap_extra_B=648272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=69838700922
+mem_heap_B=7174854296
+mem_heap_extra_B=631376
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=70555617562
+mem_heap_B=7174823320
+mem_heap_extra_B=614480
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=71272534202
+mem_heap_B=7174792344
+mem_heap_extra_B=597584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=71989450842
+mem_heap_B=7174761368
+mem_heap_extra_B=580688
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=72706367482
+mem_heap_B=7174730392
+mem_heap_extra_B=563792
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=73423284122
+mem_heap_B=7174699416
+mem_heap_extra_B=546896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=74140200762
+mem_heap_B=7174668440
+mem_heap_extra_B=530000
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=74857117402
+mem_heap_B=7174637464
+mem_heap_extra_B=513104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=75574034042
+mem_heap_B=7174606488
+mem_heap_extra_B=496208
+mem_stacks_B=0
+heap_tree=detailed
+n2: 7174606488 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 7172666976 0x10DE4E: __gnu_cxx::new_allocator<Graph::Edge*>::allocate(unsigned long, void const*) (new_allocator.h:111)
+  n1: 7172666976 0x10D119: std::allocator_traits<std::allocator<Graph::Edge*> >::allocate(std::allocator<Graph::Edge*>&, unsigned long) (alloc_traits.h:436)
+   n2: 7172666976 0x10C160: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_allocate(unsigned long) (stl_vector.h:172)
+    n1: 7172186912 0x10C62F: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_M_create_storage(unsigned long) (stl_vector.h:187)
+     n2: 7172186912 0x10B76D: std::_Vector_base<Graph::Edge*, std::allocator<Graph::Edge*> >::_Vector_base(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:138)
+      n1: 7172186912 0x10ADDC: std::vector<Graph::Edge*, std::allocator<Graph::Edge*> >::vector(unsigned long, std::allocator<Graph::Edge*> const&) (stl_vector.h:284)
+       n1: 7172186912 0x109CB0: Graph::add_nodes(int) (graph.cpp:20)
+        n1: 7172186912 0x10A74C: Graph::Graph(char const*, Graph::DirType) (graph.cpp:163)
+         n0: 7172186912 0x10ED5C: main (main.cpp:9)
+      n0: 0 in 1 place, below massif's threshold (1.00%)
+    n0: 480064 in 1 place, below massif's threshold (1.00%)
+ n0: 1939512 in 12 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=96
+#-----------
+time=76290950682
+mem_heap_B=7174575512
+mem_heap_extra_B=479312
+mem_stacks_B=0
+heap_tree=empty
