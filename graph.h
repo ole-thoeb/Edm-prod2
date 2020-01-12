@@ -9,24 +9,14 @@ class Graph {
 public:
     using NodeId = int;  // vertices are numbered 0,...,num_nodes()-1
 
-    //class Neighbor {
-    //public:
-    //    Neighbor(Graph::NodeId n, int w);
-    //    int edge_weight() const;
-    //    Graph::NodeId id() const;
-    //private:
-    //    Graph::NodeId _id;
-    //    int _edge_weight;
-    //};
-
     class Edge {
     public:
         int weight; // sum of the weights
         Graph::NodeId from;
         Graph::NodeId to;
-        std::vector<std::pair<int, int>> composit; //id to weight
-        Edge(Graph::NodeId from, Graph::NodeId to);
-        void addEdge(int edgeId, int weight);
+        int id;
+        Edge *revers;
+        Edge(Graph::NodeId from, Graph::NodeId to, int weight, int id);
     };
 
     class Node {
@@ -34,6 +24,7 @@ public:
         std::vector<Graph::Edge*> & edges();
         const Graph::NodeId id();
         Node(Graph::NodeId id);
+        void addEdge(Edge *edge);
         //Node();
     private:
         std::vector<Graph::Edge*> _edges;
@@ -50,8 +41,7 @@ public:
 
     NodeId num_nodes() const;
     Node & get_node(NodeId);
-    Edge* getOrCreateEdge(NodeId from, NodeId to);
-    std::vector<std::vector<Edge*>>& matrix();
+    std::vector<Graph::Edge*> &edges();
     void print();
 
     const DirType dirtype;
@@ -59,9 +49,8 @@ public:
     static const double infinite_weight;
 
 private:
-    void addSingleEdge(NodeId from, NodeId to, int weight, int index);
     std::vector<Node> _nodes;
-    std::vector<std::vector<Edge*>> _matrix;
+    std::vector<Edge*> _edges;
 };
 
 #endif // GRAPH_H

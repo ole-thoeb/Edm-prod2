@@ -11,30 +11,18 @@ const double Graph::infinite_weight = std::numeric_limits<double>::max();
 
 void Graph::add_nodes(NodeId num_new_nodes) {
     int oldNum = num_nodes();
-    int totalNum = oldNum + num_new_nodes;
-    for (auto &row : _matrix) {
-        row.resize(totalNum);
-    }
     for (int i = 0; i < num_new_nodes; i++) {
-        _nodes.push_back(Node(oldNum + i));
-        _matrix.push_back(std::vector<Graph::Edge*>(totalNum));
+        _nodes.push_back(Graph::Node(oldNum + i));
     }
-    int s = 0;
-    for (size_t i = 0; i < 1000000; i++) {
-        s = i;
-    }
-    
 }
-
-//Graph::Neighbor::Neighbor(Graph::NodeId n, int w) : _id(n), _edge_weight(w) {}
 
 Graph::Graph(NodeId num, DirType dtype) : dirtype(dtype) {
     add_nodes(num);
 }
 
 Graph::~Graph() {
-    for (auto &row : _matrix) {
-        for (auto edge : row) {
+    for (auto &node : _nodes) {
+        for (auto edge : node.edges()) {
             if (edge != nullptr) {
                 delete edge;
             }
@@ -46,32 +34,18 @@ void Graph::add_edge(NodeId tail, NodeId head, int weight, int index) {
     if (tail >= num_nodes() or tail < 0 or head >= num_nodes() or head < 0) {
         throw std::runtime_error("Edge cannot be added due to undefined endpoint.");
     }
-    addSingleEdge(tail, head, weight, index);
-    if (dirtype == Graph::undirected) {
-        addSingleEdge(head, tail, weight, index);
-    }
-}
+    Graph::Edge *ftt = new Graph::Edge(tail, head,  weight, index);
+    _nodes[tail].addEdge(ftt);
+    _edges.push_back(ftt);
 
-void Graph::addSingleEdge(NodeId from, NodeId to, int weight, int index) {
-    getOrCreateEdge(from, to)->addEdge(index, weight);
-}
+    Graph::Edge *ttf = new Graph::Edge(head, tail, 0, -index - 1);
+    _nodes[head].addEdge(ttf);
 
-Graph::Edge* Graph::getOrCreateEdge(Graph::NodeId from, Graph::NodeId to) {
-    Graph::Edge *edge = _matrix[from][to];
-    if (edge == nullptr) {
-        edge = new Graph::Edge(from, to);
-        _matrix[from][to] = edge;
-        get_node(from).edges().push_back(edge);
-    }
-    return edge;
-}
-
-std::vector<std::vector<Graph::Edge*>>& Graph::matrix() {
-    return _matrix;
+    ftt->revers = ttf;
+    ttf->revers = ftt;
 }
 
 Graph::Node::Node(Graph::NodeId id) : _id(id) {}
-//Graph::Node::Node() {}
 
 const Graph::NodeId Graph::Node::id() {
     return _id;
@@ -79,6 +53,10 @@ const Graph::NodeId Graph::Node::id() {
 
 std::vector<Graph::Edge*> &Graph::Node::edges() {
     return _edges;
+}
+
+void Graph::Node::addEdge(Graph::Edge *edge) {
+    _edges.push_back(edge);
 }
 
 Graph::NodeId Graph::num_nodes() const
@@ -95,22 +73,11 @@ Graph::Node &Graph::get_node(NodeId node)
     return _nodes[node];
 }
 
-// Graph::NodeId Graph::Neighbor::id() const
-//{
-//    return _id;
-//}
-//
-//int Graph::Neighbor::edge_weight() const
-//{
-//    return _edge_weight;
-//}
-
-Graph::Edge::Edge(Graph::NodeId from, Graph::NodeId to) : weight(0), from(from), to(to) {}
-
-void Graph::Edge::addEdge(int edgeId, int weight) {
-    this->weight += weight;
-    composit.push_back(std::pair(edgeId, weight));
+std::vector<Graph::Edge*> &Graph::edges() {
+    return _edges;
 }
+
+Graph::Edge::Edge(Graph::NodeId from, Graph::NodeId to, int weight, int id) : weight(weight), from(from), to(to), id(id), revers(nullptr) {}
 
 void Graph::print()
 {

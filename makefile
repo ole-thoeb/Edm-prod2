@@ -6,7 +6,7 @@ BIN = ford.out
 PRODBIN = prodFord.out
 
 CC = g++
-CFLAGS = -g -Wall -std=c++17
+CFLAGS = -g -Wall -std=c++17 -fsanitize=address
 
 $(BIN): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $(SRC)

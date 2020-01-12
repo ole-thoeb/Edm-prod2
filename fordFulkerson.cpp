@@ -16,72 +16,52 @@ int U(Graph &g) {
 }
 
 /**
- * retuns the the path from start to end in reversed order or an empty vector if no such path exists
+ * retuns the the path from start to end or an empty vector if no such path exists
 **/
-std::vector<Graph::Edge*>* findPath(Graph &g, Graph::NodeId start, Graph::NodeId end, int limit) {
-	std::vector<Graph::NodeId> parent(g.num_nodes());
-	std::vector<bool> visited(g.num_nodes());
-	std::deque<Graph::Node> queue;
-	visited[start] = true;
-	queue.push_back(g.get_node(start));
-	
-	while (queue.size() != 0) {
-		//std::cout << "current queue is ";
-		//for (Graph::Node e : queue) {
-		//	std::cout << e.id() << ", ";
-		//}
-		//std::cout << "\n";
-		Graph::Node u = queue.front();
-		queue.pop_front();
-		for (Graph::Edge *edge : u.edges()) {
-			Graph::Node v = g.get_node(edge->to);
-			//std::cout << "looking at edge " << edge->from << " - " << edge->to << " with weight " << edge->weight << "\n";
-			if (edge->weight >= limit && not visited[v.id()]) {
-				//std::cout << "found " << v.id() << "\n";
-				queue.push_back(v);
-				visited[v.id()] = true;
-				parent[v.id()] = u.id();
+std::vector<Graph::Edge*> findPath(Graph &g, Graph::NodeId start, Graph::NodeId end, std::vector<Graph::Edge*> &path, std::vector<bool> &visited, int scaling_value) {
+	if (start == end) {
+		return path;
+	}
+	for(Graph::Edge* edge : g.get_node(start).edges()){
+		if ((edge->weight >= scaling_value) and not visited[edge->to]){
+			visited[edge->to] = true;
+			path.push_back(edge);
+			std::vector<Graph::Edge*> result = findPath(g, edge->to, end, path, visited, scaling_value);
+			if(not result.empty()){
+				return result;
 			}
+			path.pop_back();
 		}
 	}
-	std::vector<Graph::Edge*> *path = new std::vector<Graph::Edge*>();
-	if (visited[end]) {
-		Graph::NodeId v = end;
-		while (v != start) {
-			Graph::NodeId u = parent[v];
-			path->push_back(g.matrix()[u][v]);
-			v = u;
-		}
-	}
-	return path;
+	return {};
 }
 
 int fordFulkerson(Graph &g) {
 	int delta = 2 << (int)std::floor(std::log(U(g)));
 	int flowValue = 0;
 	while (delta >= 1) {
-		std::vector<Graph::Edge*> *augmentingPath = findPath(g, 0, 1, delta);
-		while (not augmentingPath->empty()) {
+		std::vector<Graph::Edge*> augmentingPath;
+		std::vector<bool> v(g.num_nodes());
+		augmentingPath = findPath(g, 0, 1, augmentingPath, v, delta);
+		while (not augmentingPath.empty()) {
 			//g.print();
-			int min = (*augmentingPath)[0]->weight;
-			for (size_t i = 1; i < augmentingPath->size(); i++) {
-				auto edge = (*augmentingPath)[i];
+			int min = augmentingPath[0]->weight;
+			for (size_t i = 1; i < augmentingPath.size(); i++) {
+				auto edge = augmentingPath[i];
 				if (edge->weight < min) {
 					min = edge->weight;
 				}
 			}
 			flowValue += min;
-			for (Graph::Edge* edge : *augmentingPath) {
+			for (Graph::Edge* edge : augmentingPath) {
 				edge->weight -= min;
-				g.getOrCreateEdge(edge->to, edge->from)->weight += min;
+				edge->revers->weight += min;
 			}
-			delete augmentingPath;
-			augmentingPath = findPath(g, 0, 1, delta);
+			augmentingPath.clear();
+			std::fill(v.begin(), v.end(), false);
+			augmentingPath = findPath(g, 0, 1, augmentingPath, v, delta);
 		}
-		//std::cout << "size " << augmentingPath.size() << "\n";
-		delete augmentingPath;
 		delta /= 2;
 	}
-	//g.print();
 	return flowValue;
 }
